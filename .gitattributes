@@ -1,0 +1,6 @@
+# Normalize line endings on checkout.
+# Default everything to LF so shell scripts and markdown work on all platforms.
+* text=auto eol=lf
+
+# PowerShell is happiest with CRLF on Windows.
+*.ps1 text eol=crlf
