@@ -1,0 +1,11 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Installer backups (if anyone runs the installer from inside the repo tree)
+*.bak.*
