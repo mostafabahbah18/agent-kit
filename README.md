@@ -91,6 +91,16 @@ Two modes:
    the existing CLAUDE.md as the canonical manual. Use this when a repo already
    has a detailed manual you do not want to move.
 
+## Subprojects (monorepos)
+
+A repo can hold more than one `.agent/`. Give any subproject its own
+`.agent/` folder (copy `project-kit/.agent/` into it) and the workflows scope
+themselves automatically: `/start`, `/handover`, and `/decide` always use the
+NEAREST `.agent/`, found from the current working directory walking up. Open
+your session inside the subproject folder and only that subproject's state
+loads; the repo-root `.agent/` keeps tracking the repo-wide picture without
+leaking into focused work.
+
 ## Customize
 
 `global/RULES.md` is the single source of the rules. The Core sections suit

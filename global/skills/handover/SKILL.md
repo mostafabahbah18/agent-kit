@@ -8,6 +8,10 @@ description: Close a work session by rewriting .agent/STATE.md, appending a date
 Goal: leave the repo so the next session, in any tool, can resume from `/start`
 alone.
 
+Scope resolution: write to the NEAREST `.agent/` (current working directory
+first, then walking up parents; first one found wins). In a monorepo, never
+write a subproject's handover into a parent's `.agent/`.
+
 Steps:
 
 1. Rewrite `.agent/STATE.md`: Where we are, Next steps, Open questions, Active

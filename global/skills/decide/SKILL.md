@@ -7,6 +7,11 @@ description: Append a timestamped, locked-in decision (the decision plus the WHY
 
 Goal: make a settled decision permanent and portable across sessions and tools.
 
+Scope resolution: append to the NEAREST `.agent/DECISIONS.md` (current working
+directory first, then walking up parents; first `.agent/` found wins). If the
+decision clearly belongs to a parent scope instead, say so and confirm before
+writing there.
+
 Entry format (append to `.agent/DECISIONS.md`, newest at the bottom):
 
 ```
